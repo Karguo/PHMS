@@ -1,0 +1,192 @@
+<h2>Trends</h2>
+
+<h3>Today's readings:</h3>
+    
+
+<h3>Past 7 days:</h3>
+
+<div style="width:50%;">
+    <canvas id="tempChart"></canvas>
+</div>
+<script>
+var ctx = document.getElementById("tempChart");
+var tempChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["01/12", "02/12", "03/12", "04/12", "05/12", "06/12", "07/12"],
+        datasets: [{
+            label: 'Temperature',
+            data: [36.5, 36.0, 36.6, 37.0, 36.9, 36.5, 36.0],
+            borderColor: [
+                'black',
+            ],
+            borderWidth: 1,
+            pointBackgroundColor: 'black',
+        }]
+    },
+    options: {
+        responsive: true,
+		title: {
+			display: true,
+			text: 'Temperature recordings'
+		},
+        legend: {
+            display: true,
+            labels: {
+                fontColor: 'black'
+            }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 25,
+                    max: 50,
+                    stepSize: 10,
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<div style="width:50%;">
+    <canvas id="bpChart"></canvas>
+</div>
+<script>
+var ctx = document.getElementById("bpChart");
+var bpChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["01/12", "02/12", "03/12", "04/12", "05/12", "06/12", "07/12"],
+        datasets: [{
+            label: 'Systolic Blood Pressure',
+            data: [120, 140, 115, 125, 105, 130, 135],
+            borderColor: [
+                'black',
+            ],
+            borderWidth: 1,
+            pointBackgroundColor: 'black',
+        },
+        {
+            label: 'Diastolic Blood Pressure',
+            data: [70, 90, 65, 80, 71, 85, 69],
+            borderColor: [
+                'red',
+            ],
+            borderWidth: 1,
+            pointBackgroundColor: 'red',
+        }]
+    },
+    options: {
+        responsive: true,
+		title: {
+			display: true,
+			text: 'Blood pressure recordings'
+		},
+        legend: {
+            display: true,
+            labels: {
+                fontColor: 'black'
+            }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 50,
+                    max: 200,
+                    stepSize: 10,
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+<div style="width:50%;">
+    <canvas id="prChart"></canvas>
+</div>
+<script>
+var ctx = document.getElementById("prChart");
+var prChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["01/12", "02/12", "03/12", "04/12", "05/12", "06/12", "07/12"],
+        datasets: [{
+            label: 'Heart Rate',
+            data: [80, 70, 65, 85, 100, 90, 82],
+            borderColor: [
+                'black',
+            ],
+            borderWidth: 1,
+            pointBackgroundColor: 'black',
+        }]
+    },
+    options: {
+        responsive: true,
+		title: {
+			display: true,
+			text: 'Heart rate recordings'
+		},
+        legend: {
+            display: true,
+            labels: {
+                fontColor: 'black'
+            }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 30,
+                    max: 150,
+                    stepSize: 10,
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<div style="width:50%;">
+    <canvas id="bslChart"></canvas>
+</div>
+<script>
+var ctx = document.getElementById("bslChart");
+var bslChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["01/12", "02/12", "03/12", "04/12", "05/12", "06/12", "07/12"],
+        datasets: [{
+            label: 'Blood Sugar Levels',
+            data: [8.0, 7.2, 16.4, 15.4, 10.1, 15.1, 7.3],
+            borderColor: [
+                'black',
+            ],
+            borderWidth: 1,
+            pointBackgroundColor: 'black',
+        }]
+    },
+    options: {
+        responsive: true,
+		title: {
+			display: true,
+			text: 'Blood sugar recordings'
+		},
+        legend: {
+            display: true,
+            labels: {
+                fontColor: 'black'
+            }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 3,
+                    max: 30,
+                    stepSize: 2,
+                }
+            }]
+        }
+    }
+});
+</script>
