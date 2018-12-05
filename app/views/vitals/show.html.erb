@@ -1,10 +1,10 @@
 <h2>Trends</h2>
 
 <h3>Today's readings:</h3>
-    <p>Temperature: </p>
-    <p>Blood Pressure: </p>
-    <p>Heart Rate: </p>
-    <p>Blood Sugar Levels: </p>
+    <p>Temperature: <%= Vital.last.temp %> &#8451;</p>
+    <p>Blood Pressure: <%= Vital.last.sbp %> / <%= Vital.last.dbp %></p>
+    <p>Heart Rate: <%= Vital.last.pr %> bpm</p>
+    <p>Blood Sugar Levels: <%= Vital.last.bsl %> mmol/L</p>
 
 <h3>Past 7 days:</h3>
 
