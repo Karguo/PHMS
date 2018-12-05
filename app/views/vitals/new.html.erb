@@ -1,7 +1,9 @@
 <h2>Enter your readings:</h2>
 
 
-<form id="form" action="#" method="post">
+<form id="form" action="/vitals" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    
     <h3>Temperature</h3>
     <section>
         <legend>Enter</legend>

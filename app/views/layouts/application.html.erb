@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Phmstrial</title>
+    <title>PHMS</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -20,7 +20,7 @@
 
       <section class="login">
         <% if logged_in %>
-          <p>Username: <%= session[:username] %></p>
+          <p>Welcome, <%= session[:username] %></p>
           <form action="/session" method="post">
             <input type="hidden" name="_method" value="delete">
             <button>Logout</button>
