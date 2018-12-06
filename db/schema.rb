@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_12_05_045616) do
     t.integer "sats"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
+    t.integer "user_id"
   end
 
 end
