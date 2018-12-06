@@ -1,14 +1,16 @@
 <h2>Trends</h2>
 
-<h3>Today's readings:</h3>
-    <p>Temperature: <%= @vital.temp %> &#8451;</p>
-    <p>Blood Pressure: <%= @vital.sbp %> / <%= @vital.dbp %> mmHg</p>
-    <p>Heart Rate: <%= @vital.pr %> bpm</p>
-    <p>Blood Sugar Levels: <%= @vital.bsl %> mmol/L</p>
+<div class="today">
+    <h3>Today's readings:</h3>
+        <p>Temperature: <%= @vital.temp %> &#8451;</p>
+        <p>Blood Pressure: <%= @vital.sbp %> / <%= @vital.dbp %> mmHg</p>
+        <p>Heart Rate: <%= @vital.pr %> bpm</p>
+        <p>Blood Sugar Levels: <%= @vital.bsl %> mmol/L</p>
+</div>
 
 <h3>Past 7 days:</h3>
 
-<div style="width:50%;">
+<div class="tchart">
     <canvas id="tempChart"></canvas>
 </div>
 <script>
@@ -52,11 +54,12 @@ let tempChart = new Chart(ctx, {
                 }]
             }
         }
-    
+
 });
 </script>
 
-<div style="width:50%;">
+<br>
+<div class="bldpChart">
     <canvas id="bpChart"></canvas>
 </div>
 <script>
@@ -111,8 +114,8 @@ var bpChart = new Chart(ctx, {
 });
 </script>
 
-
-<div style="width:50%;">
+<br>
+<div class="pulseChart">
     <canvas id="prChart"></canvas>
 </div>
 <script>
@@ -157,7 +160,8 @@ var prChart = new Chart(ctx, {
 });
 </script>
 
-<div style="width:50%;">
+<br>
+<div class="bloodChart">
     <canvas id="bslChart"></canvas>
 </div>
 <script>

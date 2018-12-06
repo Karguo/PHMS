@@ -107,6 +107,8 @@
 .wizard > .steps .disabled a:hover,
 .wizard > .steps .disabled a:active
 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
     background: #eee;
     color: #aaa;
     cursor: default;
@@ -116,6 +118,8 @@
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active
 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
     background: #2184be;
     color: #fff;
     cursor: default;
@@ -125,21 +129,27 @@
 .wizard > .steps .done a:hover,
 .wizard > .steps .done a:active
 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
     background: #9dc8e2;
-    color: #fff;
+    color: coral;
 }
 
 .wizard > .steps .error a,
 .wizard > .steps .error a:hover,
 .wizard > .steps .error a:active
 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
     background: #ff3111;
-    color: #fff;
+    color: coral;
 }
 
 .wizard > .content
 {
-    background: #eee;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
+    background: rgba(255, 130, 85, 0.6);
     display: block;
     margin-top: 3.65em;
     margin-left: 0.5em;
@@ -156,6 +166,8 @@
 
 .wizard.vertical > .content
 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
     display: inline;
     float: left;
     margin: 0 2.5% 0.5em 2.5%;
@@ -164,6 +176,8 @@
 
 .wizard > .content > .body
 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
     float: left;
     position: absolute;
     width: 95%;

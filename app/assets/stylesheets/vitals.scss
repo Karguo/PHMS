@@ -1,5 +1,5 @@
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
@@ -7,24 +7,46 @@ body {
   margin-top: 20px; 
 }
 
+.logo {
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   border: 3px solid #2c3e50;
   padding-bottom: 5px;
   background-color: coral;
 }
 
-.logo {
+.login {
   margin: 10px;
-  width: 60px;
-  height: 60px;
+}
+
+.login button {
+  padding: 8px 8px;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color: red;
+  background-color: lightskyblue;
+  border: 1px solid black;
+}
+
+.login a {
+  text-decoration: none;
 }
 
 h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+h2 {
   text-align: center;
   font-size: 2em;
 }
@@ -42,14 +64,52 @@ h1 {
 
 .box {
   display: flex;
-  justify-content: center;
+  text-align: center;
   align-items: center;
   border: 3px solid #2c3e50;
   background-color: coral;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .box a {
   text-decoration: none;
   color: black;
+}
+
+.today {
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+
+h3 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.tchart {
+  width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  background-color: rgba($color: white, $alpha: 0.5);
+}
+
+.bldpChart {
+  width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  background-color: rgba($color: white, $alpha: 0.5);
+}
+
+.pulseChart {
+  width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  background-color: rgba($color: white, $alpha: 0.5);
+}
+
+.bloodChart {
+  width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  background-color: rgba($color: white, $alpha: 0.5);
 }
