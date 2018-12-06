@@ -4,6 +4,8 @@ class VitalsController < ApplicationController
   end
 
   def show
+    @vital = Vital.where(user_id: current_user.id).last
+    @label_data = current_user.vitals.pluck(:created_at).map { |d| d.strftime("%d/%m") }
   end
 
   def create

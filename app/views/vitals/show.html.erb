@@ -1,10 +1,10 @@
 <h2>Trends</h2>
 
 <h3>Today's readings:</h3>
-    <p>Temperature: <%= Vital.last.temp %> &#8451;</p>
-    <p>Blood Pressure: <%= Vital.last.sbp %> / <%= Vital.last.dbp %> mmHg</p>
-    <p>Heart Rate: <%= Vital.last.pr %> bpm</p>
-    <p>Blood Sugar Levels: <%= Vital.last.bsl %> mmol/L</p>
+    <p>Temperature: <%= @vital.temp %> &#8451;</p>
+    <p>Blood Pressure: <%= @vital.sbp %> / <%= @vital.dbp %> mmHg</p>
+    <p>Heart Rate: <%= @vital.pr %> bpm</p>
+    <p>Blood Sugar Levels: <%= @vital.bsl %> mmol/L</p>
 
 <h3>Past 7 days:</h3>
 
@@ -12,44 +12,47 @@
     <canvas id="tempChart"></canvas>
 </div>
 <script>
+
+let tempChartData = {};
+   
+tempChartData.datasets = [];
+tempChartData.datasets.push({}); 
+dataset = tempChartData.datasets[0];
+dataset.data = <%= current_user.vitals.pluck(:temp) %>;
+dataset.label = 'Temperature';
+dataset.fill = false;
+dataset.borderColor = ['black'];
+dataset.borderWidth = 1;
+dataset.pointBackgroundColor = 'black';
+
 var ctx = document.getElementById("tempChart");
-var tempChart = new Chart(ctx, {
+let tempChart = new Chart(ctx, {
     type: 'line',
-    data: {
-        labels: ["01/12", "02/12", "03/12", "04/12", "05/12", "06/12", "07/12"],
-        datasets: [{
-            label: 'Temperature',
-            data: [36.5, 36.0, 36.6, 37.0, 36.9, 36.5, 36.0],
-            fill: false,
-            borderColor: [
-                'black',
-            ],
-            borderWidth: 1,
-            pointBackgroundColor: 'black',
-        }]
-    },
-    options: {
-        responsive: true,
-		title: {
-			display: true,
-			text: 'Temperature recordings'
-		},
-        legend: {
-            display: true,
-            labels: {
-                fontColor: 'black'
-            }
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    min: 25,
-                    max: 50,
-                    stepSize: 10,
+    data: tempChartData,
+        labels: <%= raw @label_data %>,
+        options: {
+            responsive: true,
+		    title: {
+			    display: true,
+			    text: 'Temperature recordings'
+		    },
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: 'black'
                 }
-            }]
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 25,
+                        max: 45,
+                        stepSize: 5,
+                    }
+                }]
+            }
         }
-    }
+    
 });
 </script>
 
