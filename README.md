@@ -17,5 +17,6 @@ I would like to develop the corresponding app for the healthcare professional wh
 ### Unresolved issues for the app
 Not enough historical data to ensure that the charts will populated with the appropriate entries. 
 More research is needed to make sure the colors and fonts for the app is appropriate for the intended audience. 
+Had intended to change the way the readings are entered, perhaps using a scrollable number picker like https://pub.dartlang.org/packages/numberpicker or equivalent. 
 
 # PHMS
