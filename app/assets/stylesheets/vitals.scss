@@ -53,17 +53,17 @@ h2 {
 
 .container {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  width: 800px;
-  height: 800px;
+  width: 80%;
+  height: 400px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .box {
   display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   border: 3px solid #2c3e50;
@@ -84,6 +84,16 @@ h2 {
 h3 {
   font-size: 2em;
   text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+input {
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tchart {

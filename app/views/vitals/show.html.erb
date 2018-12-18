@@ -16,7 +16,8 @@
 <script>
 
 let tempChartData = {};
-   
+let dateLabels = [];
+dateLabels.labels = <%= raw @label_data %>;
 tempChartData.datasets = [];
 tempChartData.datasets.push({}); 
 dataset = tempChartData.datasets[0];
@@ -31,7 +32,7 @@ var ctx = document.getElementById("tempChart");
 let tempChart = new Chart(ctx, {
     type: 'line',
     data: tempChartData,
-        labels: <%= raw @label_data %>,
+        dateLabels,
         options: {
             responsive: true,
 		    title: {
@@ -54,7 +55,7 @@ let tempChart = new Chart(ctx, {
                 }]
             }
         }
-
+    
 });
 </script>
 
